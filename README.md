@@ -1,69 +1,60 @@
-# React + TypeScript + Vite
+# React Dynamic Form Builder 📝
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, single-page application for creating and previewing custom web forms, featuring a clean, responsive UI with automatic light and dark modes.
 
-Currently, two official plugins are available:
+This project showcases a professional implementation of a two-column layout: a drag-and-drop form builder on the left and a live, interactive preview on the right. It's built with a modern tech stack, focusing on performance, scalability, and clean code.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Table of Contents
+* [Features](#features)
+* [Technology Stack](#technology-stack)
+* [Getting Started](#getting-started)
+* [Available Scripts](#available-scripts)
+* [Project Structure](#project-structure)
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Intuitive Drag-and-Drop**: Easily reorder form fields.
+- **Live Interactive Preview**: Instantly see and test changes as you build.
+- **Dynamic Field Configuration**: Edit labels, placeholders, and validation rules.
+- **Centralized State Management**: Efficiently managed with **Zustand**.
+- **Responsive Design**: Seamless experience on desktop and mobile.
+- **Automatic Dark Mode**: Adapts to your OS's theme preference.
+- **LocalStorage Persistence**: Save and load your form progress.
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Technology Stack
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- **Framework**: [React 18](https://reactjs.org/)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Build Tool**: [Vite](https://vitejs.dev/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **State Management**: [Zustand](https://zustand-demo.pmnd.rs/)
+- **Drag and Drop**: [React DnD](https://react-dnd.github.io/react-dnd/about)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Getting Started
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Follow these instructions to get the project running on your local machine.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Prerequisites
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- Node.js (v18 or higher)
+- npm
+
+### Installation
+
+1.  **Clone the repository:**
+    ```sh
+    git clone [https://your-repository-url.git](https://your-repository-url.git)
+    cd react-dynamic-form-builder-app
+    ```
+
+2.  **Install NPM packages:**
+    ```sh
+    npm install
+    ```
+
+### Running the Application
+
+To start the Vite development server, run:
+
+```sh
+npm run dev
